@@ -12,7 +12,7 @@ void calculate_cartesian_product(int a1[], int lenght_a1, int a2[], int lenght_a
     printf("A1 X A2 X A3 X A4 = (\n");
     #pragma omp parallel num_threads(numthreads) shared(index_a1, index_a2, index_a3, index_a4)
     {
-        #pragma omp for collapse(3)
+        #pragma omp for collapse(4)
         for (index_a1=0; index_a1<lenght_a1; index_a1++) {
             for (index_a2=0; index_a2<lenght_a2; index_a2++){
                 for (index_a3=0; index_a3<lenght_a3; index_a3++){
